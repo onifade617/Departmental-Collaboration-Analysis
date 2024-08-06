@@ -10,6 +10,6 @@ import streamlit as st
 
 
 def main():    
-    st.write("Machine learning models")
+    st.title("Machine learning models")
     tab1, tab2 = st.tabs(["Supervised learning", "Unsupervised Learning"])
 
