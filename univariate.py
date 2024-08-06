@@ -40,7 +40,7 @@ def main():
             st.markdown("## Variable 6")
             
     #Container 3
-    with container2:
+    with container3:
         col7, col8, col9 = st.columns(3)
         
         with col4:
