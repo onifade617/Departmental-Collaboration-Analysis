@@ -8,8 +8,28 @@ Created on Tue Aug  6 09:34:44 2024
 import streamlit as st
 import home, univariate, bi_variate, ml_models
 
+
+st.sidebar.markdown("""
+    <style>
+    .stButton>button {
+        width: 100%;
+        height: 50px;
+        font-size: 20px;
+    }
+    </style>""", unsafe_allow_html=True)
+
+
+
 # Create a menu
 st.sidebar.title("Departmental Collaboration Analysis")
+
+
+
+
+
+
+
+
 
 # Add buttons to navigate between pages
 if st.sidebar.button('Home'):
