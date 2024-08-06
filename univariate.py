@@ -43,12 +43,12 @@ def main():
     with container3:
         col7, col8, col9 = st.columns(3)
         
-        with col4:
+        with col7:
             st.markdown("## Variable 7")
             
-        with col5:
+        with col8:
             st.markdown("## Variable 8")
             
-        with col6:
+        with col9:
             st.markdown("## Variable 9")
     
