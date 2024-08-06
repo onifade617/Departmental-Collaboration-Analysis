@@ -7,7 +7,7 @@ Created on Tue Aug  6 09:34:44 2024
 
 import streamlit as st
 
-import home, univariate, bi_variate, ml_model 
+import home, univariate, bi_variate, ml_models 
 
 # Create a menu
 st.sidebar.title("Departmental Collaboration Analysis")
