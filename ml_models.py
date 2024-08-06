@@ -9,7 +9,6 @@ import streamlit as st
 
 
 
-def main():
-    
+def main():    
     st.write("Machine learning models")
 

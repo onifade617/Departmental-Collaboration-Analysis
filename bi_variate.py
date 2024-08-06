@@ -9,5 +9,5 @@ import streamlit as st
 
 
 def main():
-    st.write("Biivariate")
+    st.write("Bivariate")
 
