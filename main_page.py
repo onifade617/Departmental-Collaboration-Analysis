@@ -31,6 +31,6 @@ if st.sidebar.button('Machine Learning Models'):
 if st.session_state.get('page') == 'univariate':
     univariate.main()
 elif st.session_state.get('page') == 'bi_variate':
-    bi-variate.main()
+    bi_variate.main()
 elif st.session_state.get('page') == 'ml_models':
-    ml-models.main()
+    ml_models.main()
