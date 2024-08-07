@@ -6,13 +6,39 @@ Created on Tue Aug  6 09:53:18 2024
 """
 
 import streamlit as st
+import pandas as pd
+import matplotlib.pyplot as plt
+
+
+
+
+#read csv file
+df = pd.read_csv("Email Analysis Dataset.csv")
+df.columns
+
+
 
 def main():
     st.markdown("## Univariate Statistics")
 
     col1, col2, col3 = st.columns(3)
     with col1:
-        st.markdown("## Variable 1")
+        # Count the occurrences of each category
+        category_counts = df['From seniority'].value_counts().reset_index()
+        category_counts.columns = ['Seniority', 'Count']
+
+        # Display the bar chart using Streamlit
+        fig, ax = plt.subplots()
+        bars = ax.bar(category_counts['Seniority'], category_counts['Count'])
+        max_value = max(category_counts['Count'])
+        max_index = category_counts['Count'].idxmax()
+        bars[max_index].set_color('red')  # Set the longest bar to red
+        for i, v in enumerate(category_counts['Count']):
+            ax.text(i, v + 1, str(v), color='black', ha='center')
+            
+        st.pyplot(fig)
+
+
     with col2:
         st.markdown("## Variable 2")
     with col3:
@@ -34,3 +60,5 @@ def main():
     with col9:
         st.markdown("## Variable 9")
 
+    st.markdown('## Data Overview ')
+    st.write(df)
