@@ -56,7 +56,7 @@ def main():
             dept_counts = df['From Department'].value_counts().reset_index()
             dept_counts.columns = ['Department', 'Count']
             
-            st.bar_chart(pd.DataFrame(dept_counts), x = 'Count', y = 'Department')
+            st.bar_chart(pd.DataFrame(dept_counts), x = 'Department', y = 'Count')
             
         
 
