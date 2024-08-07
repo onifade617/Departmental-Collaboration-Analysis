@@ -51,21 +51,12 @@ def main():
             st.pyplot(fig)
          
         with col2:
-            st.markdown("## Sender Department")
+            st.header("Sender Department")
             # Count the occurrences of each category
             dept_counts = df['From Department'].value_counts().reset_index()
             dept_counts.columns = ['Department', 'Count']
 
-            # Display the bar chart using Streamlit
-            fig, ax = plt.subplots()
-            bars = ax.barh(dept_counts['Department'], dept_counts['Count'])
-            max_value = max(dept_counts['Count'])
-            max_index = dept_counts['Count'].idxmax()
-            bars[max_index].set_color('green')  # Set the longest bar to red
-            for i, v in enumerate(dept_counts['Count']):
-                ax.text(i, v + 1, str(v), color='black', ha='center')
-                
-            st.pyplot(fig)
+            st.bar_chart(dept_counts)
         with col3:
             st.markdown("## Variable 3")
 
