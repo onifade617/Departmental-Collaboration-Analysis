@@ -28,8 +28,8 @@ def main():
         st.markdown(f"""<style>.stcontainer{{width: 800px;}}</style>""", unsafe_allow_html=True)
         
         # Create columns inside the container
-        col1, col2 = st.columns([6,4])
-        col3, col4 = st.columns([6,4])
+        col1 = st.container()
+        col2 = st.container()
         col5, col6 = st.columns([6,4])
         
         
