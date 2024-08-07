@@ -28,9 +28,9 @@ def main():
         st.markdown(f"""<style>.stcontainer{{width: 800px;}}</style>""", unsafe_allow_html=True)
         
         # Create columns inside the container
-        col1, col2, col3 = st.columns([5,2,2])
-        col4, col5, col6 = st.columns(3)
-        col7, col8, col9 = st.columns(3)
+        col1, col2 = st.columns([6,4])
+        col3, col4 = st.columns([6,4])
+        col5, col6 = st.columns([6,4])
         
         
         with col1:
@@ -51,11 +51,23 @@ def main():
             st.pyplot(fig)
          
         with col2:
-            st.markdown("## Variable 2")
+            st.markdown("## Sender Department")
+            # Count the occurrences of each category
+            category_counts = df['From Department'].value_counts().reset_index()
+            category_counts.columns = ['Department', 'Count']
+
+            # Display the bar chart using Streamlit
+            fig, ax = plt.subplots()
+            bars = ax.bar(category_counts['Department'], category_counts['Count'])
+            max_value = max(category_counts['Count'])
+            max_index = category_counts['Count'].idxmax()
+            bars[max_index].set_color('green')  # Set the longest bar to red
+            for i, v in enumerate(category_counts['Count']):
+                ax.text(i, v + 1, str(v), color='black', ha='center')
         with col3:
             st.markdown("## Variable 3")
 
-        col4, col5, col6 = st.columns(3)
+        
         with col4:
             st.markdown("## Variable 4")
         with col5:
@@ -64,13 +76,7 @@ def main():
             st.markdown("## Variable 6")
 
         
-        with col7:
-            st.markdown("## Variable 7")
-        with col8:
-            st.markdown("## Variable 8")
-        with col9:
-            st.markdown("## Variable 9")    
-    
+      
     
     
 
