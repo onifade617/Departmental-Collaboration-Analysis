@@ -58,7 +58,7 @@ def main():
 
             # Display the bar chart using Streamlit
             fig, ax = plt.subplots()
-            bars = ax.bar( dept_counts['Count'], dept_counts['Department'])
+            bars = ax.barh(dept_counts['Department'], dept_counts['Count'])
             max_value = max(dept_counts['Count'])
             max_index = dept_counts['Count'].idxmax()
             bars[max_index].set_color('green')  # Set the longest bar to red
