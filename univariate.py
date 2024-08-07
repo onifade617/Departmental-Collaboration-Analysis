@@ -55,7 +55,7 @@ def main():
             # Count the occurrences of each category
             dept_counts = df['From Department'].value_counts().reset_index()
             dept_counts.columns = ['Department', 'Count']
-            st.bar_chart(dept_counts, horizontal=True)
+            st.bar_chart(dept_counts, x = 'Count', y = 'Department')
             
         with col3:
             st.markdown("## Variable 3")
