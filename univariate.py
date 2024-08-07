@@ -25,7 +25,7 @@ def main():
     container = st.container()
     with container:
         # Set the width of the container
-        st.markdown(f"""<style>.stContainer{{width: 600px;}}</style>""", unsafe_allow_html=True)
+        st.markdown(f"""<style>.stcontainer{{width: 800px;}}</style>""", unsafe_allow_html=True)
         
         # Create columns inside the container
         col1, col2, col3 = st.columns(3)
