@@ -22,7 +22,9 @@ def main():
     st.markdown("## Univariate Statistics")
 
     col1, col2, col3 = st.columns(3)
+    
     with col1:
+        st.markdown("## Variable 2")
         # Count the occurrences of each category
         category_counts = df['From seniority'].value_counts().reset_index()
         category_counts.columns = ['Seniority', 'Count']
