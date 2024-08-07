@@ -57,16 +57,7 @@ def main():
             dept_counts.columns = ['Department', 'Count']
             st.bar_chart(dept_counts, x = 'Count', y = 'Department')
             
-        with col3:
-            st.markdown("## Variable 3")
-
         
-        with col4:
-            st.markdown("## Variable 4")
-        with col5:
-            st.markdown("## Variable 5")
-        with col6:
-            st.markdown("## Variable 6")
 
         
       
