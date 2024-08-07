@@ -64,6 +64,8 @@ def main():
             bars[max_index].set_color('green')  # Set the longest bar to red
             for i, v in enumerate(dept_counts['Count']):
                 ax.text(i, v + 1, str(v), color='black', ha='center')
+                
+            st.pyplot(fig)
         with col3:
             st.markdown("## Variable 3")
 
