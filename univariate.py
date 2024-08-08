@@ -34,10 +34,10 @@ def main():
         col3, col4 = st.columns(2)
         col5, col6 = st.columns(2)
         col7, col8 = st.columns(2)
-        col9 = st.columns()
-        col10 = st.columns()
-        col11 = st.columns()
-        col12 = st.columns()
+        col9 = st.columns(1)
+        col10 = st.columns(1)
+        col11 = st.columns(1)
+        col12 = st.columns(1)
         
         with col3:
             st.header("Sender Name")
