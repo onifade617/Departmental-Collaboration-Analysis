@@ -11,12 +11,12 @@ import streamlit as st
 def main():
     st.title("Bivariate")
     
-    tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs(["Communication Patterns During Work Hours",
-                                     "Workday Communication Trends",
-                                     "Executive Communication During Work Hours", 
-                                     "Departmental Communication During Work Hours", 
-                                     "Email Sentiment Analysis During Work Hours",
-                                     "Device Usage During Work Hours"])
+    tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs(["Hourly Interaction Trends",
+                                     "Communication Patterns",
+                                     "Executive Briefs", 
+                                     "Engagement", 
+                                     "Emotional",
+                                     "Usage"])
 
     with tab1:
         st.title("Communication Patterns During Work Hours")
