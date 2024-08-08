@@ -134,10 +134,10 @@ def main():
              
              
         with col12:
-             st.header("File sent Within work hours")
+             st.header("File sent Within Workdays")
              # Count the occurrences of each category
              hour_counts = df['Within workdays'].value_counts().reset_index()
-             hour_counts.columns = ['Opened within work hour', 'Count']
+             hour_counts.columns = ['Opened within work days', 'Count']
              
              st.bar_chart(pd.DataFrame(hour_counts), x = 'Opened within work hour', y = 'Count')
         
