@@ -30,7 +30,7 @@ def main():
         # Create columns inside the container
         #col1 = st.container()
         #col2 = st.container()
-        col1, col1 = st.columns(2)
+        col1, col2 = st.columns(2)
         
         
         with col1:
@@ -38,7 +38,7 @@ def main():
             # Count the occurrences of each category
             category_counts = df['From seniority'].value_counts().reset_index()
             category_counts.columns = ['Seniority', 'Count']
-            st.bar_chart(pd.DataFrame(category_counts), x = 'Seniority', y = 'Count')
+            st.bar_chart(pd.DataFrame(category_counts), x = 'Seniority',  y = 'Count')
             
          
         with col2:
