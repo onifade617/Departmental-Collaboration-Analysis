@@ -96,7 +96,7 @@ def main():
              topic_counts = df['Email topic'].value_counts().reset_index()
              topic_counts.columns = ['Topics', 'Count']
              
-             st.bar_chart(pd.DataFrame(dept_counts), x = 'Topics', y = 'Count')
+             st.bar_chart(pd.DataFrame(topic_counts), x = 'Topics', y = 'Count')
              
              
         with col8:
