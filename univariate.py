@@ -28,9 +28,9 @@ def main():
         st.markdown(f"""<style>.stcontainer{{width: 800px;}}</style>""", unsafe_allow_html=True)
         
         # Create columns inside the container
-        col1 = st.container()
-        col2 = st.container()
-        col5, col6 = st.columns([6,4])
+        #col1 = st.container()
+        #col2 = st.container()
+        col1, col1 = st.columns(2)
         
         
         with col1:
@@ -38,17 +38,8 @@ def main():
             # Count the occurrences of each category
             category_counts = df['From seniority'].value_counts().reset_index()
             category_counts.columns = ['Seniority', 'Count']
-
-            # Display the bar chart using Streamlit
-            fig, ax = plt.subplots()
-            bars = ax.bar(category_counts['Seniority'], category_counts['Count'])
-            max_value = max(category_counts['Count'])
-            max_index = category_counts['Count'].idxmax()
-            bars[max_index].set_color('red')  # Set the longest bar to red
-            for i, v in enumerate(category_counts['Count']):
-                ax.text(i, v + 1, str(v), color='black', ha='center')
-                
-            st.pyplot(fig)
+            st.bar_chart(pd.DataFrame(category_counts), x = 'Seniority', y = 'Count')
+            
          
         with col2:
             st.header("Sender Department")
